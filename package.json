@@ -1,5 +1,5 @@
 {
-  "name": "app-demo",
+  "name": "ngx-dynamic-tab",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
