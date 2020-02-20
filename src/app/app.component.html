@@ -1,0 +1,21 @@
+<div class="container-fluid">
+  <button mat-stroked-button (click)="addTab()" class="mt-2 mb-2">
+    Add new tab
+  </button>
+  <br />
+  <mat-radio-group [(ngModel)]="selectedRadioGroupOption">
+    <mat-radio-button
+      class="mr-2"
+      *ngFor="let option of radioGroupOptions"
+      [value]="option"
+    >
+      {{ option.title }}
+    </mat-radio-button>
+  </mat-radio-group>
+  <br />
+  <br />
+  <mat-dynamic-tab key="foo"></mat-dynamic-tab>
+  <br />
+  <br />
+  <p-dynamicTab key="baz"></p-dynamicTab>
+</div>

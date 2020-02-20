@@ -1,0 +1,14 @@
+<p-tabView
+  *ngIf="tabs.length > 0"
+  [(activeIndex)]="selectedTabIndex"
+  (onClose)="removeTab($event.index)"
+>
+  <p-tabPanel
+    *ngFor="let tab of tabs; let tabIndex = index"
+    [header]="tab.title"
+    [closable]="true"
+    [selected]="tabIndex === 0"
+  >
+    <dynamic-tab-content [tab]="tab"></dynamic-tab-content>
+  </p-tabPanel>
+</p-tabView>
